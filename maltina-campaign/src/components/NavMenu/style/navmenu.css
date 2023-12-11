@@ -1,0 +1,476 @@
+@media only screen and (max-width: 479px){
+
+    .navmenu{
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background-color: transparent;
+    }
+    .hide-item{
+        transform: translateY(100%);
+    }
+    .nav-ul{
+        position: absolute;
+        background-color: #e89925;
+        right: 0;
+        top: -14px;
+        height: 100vh;
+        width: 69%;
+        max-width: 600px;
+        transition: .7s ease transform;
+        gap: 10px;
+    }
+    ul li{
+        display: block;
+        margin: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        border-radius: 8px;
+        transition: 0.3s ease background-color;
+    }
+    ul li:hover{
+        background-color: transparent
+       
+    }
+    ul li a{
+        display: inline-block;
+        color: white;
+        font-family: 'Tanzana Narrow', sans-serif;
+        padding: 1rem 1rem;
+        font-size: 13px;
+        font-weight: 600;
+        outline: none;
+        text-decoration: none;
+        letter-spacing: -1px;
+    }
+    ul li a:hover{
+        color: rgb(65, 51, 51);
+    }
+    ul li a:active{
+        color: rgb(124, 109, 109);
+    }
+    
+    .navhead{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-div{
+        margin: 0;
+        margin-left: 29px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .md-menu{
+        margin: 0;
+        margin-right: 29px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        cursor: pointer;
+    }
+    .close{
+        margin: 0;
+        margin-right: 29px;
+        margin-top: 10px;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        display: none;
+    }
+    .close-white{
+        display: flex;
+        justify-content: right;
+        margin: 0;
+        margin-right: 25px;
+        margin-top: 35px;
+     }
+    .menu-tag{
+        color: white;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 797px){
+    .navmenu{
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background-color: transparent;
+    }
+    .hide-item{
+        transform: translateY(100%);
+    }
+    .nav-ul{
+        position: absolute;
+        background-color: #e89925;
+        right: 0;
+       top: -14px;
+        height: 100vh;
+        width: 69%;
+        max-width: 600px;
+        transition: .7s ease transform;
+        gap: 20px;
+    }
+    ul li{
+        display: block;
+        margin: 0;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+        transition: 0.3s ease background-color;
+    }
+    ul li:hover{
+        background-color: transparent
+       
+    }
+    ul li a{
+        display: inline-block;
+        color: white;
+        font-family: 'Tanzana Narrow', sans-serif;
+        padding: 1rem 1rem;
+        font-size: 19px;
+        font-weight: 800;
+        outline: none;
+        text-decoration: none;
+        letter-spacing: -1px;
+    }
+    ul li a:hover{
+        color: rgb(65, 51, 51);
+    }
+    ul li a:active{
+        color: rgb(124, 109, 109);
+    }
+    
+    .navhead{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-div{
+        margin: 0;
+        margin-left: 29px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .md-menu{
+        margin: 0;
+        margin-right: 29px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        cursor: pointer;
+    }
+    .close{
+        margin: 0;
+        margin-right: 29px;
+        margin-top: 10px;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        display: none;
+    }
+    .close-white{
+        display: flex;
+        justify-content: right;
+        margin: 0;
+        margin-right: 25px;
+        margin-top: 35px;
+     }
+    .menu-tag{
+        color: white;
+        font-size: 13px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .navmenu{
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background-color: transparent;
+    }
+    .hide-item{
+        transform: translateY(100%);
+    }
+    .nav-ul{
+        position: absolute;
+        background-color: #e89925;
+        right: 0;
+        top: -14px;
+        height: 100vh;
+        width: 90%;
+        max-width: 600px;
+        transition: .7s ease transform;
+        gap: 20px;
+    }
+    ul li{
+        display: block;
+        margin: 0;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+        transition: 0.3s ease background-color;
+    }
+    ul li:hover{
+        background-color: transparent
+       
+    }
+    ul li a{
+        display: inline-block;
+        color: white;
+        font-family: 'Tanzana Narrow', sans-serif;
+        padding: 1rem 1rem;
+        font-size: 24px;
+        font-weight: 700;
+        outline: none;
+        text-decoration: none;
+        letter-spacing: -1px;
+    }
+    ul li a:hover{
+        color: rgb(65, 51, 51);
+    }
+    ul li a:active{
+        color: rgb(124, 109, 109);
+    }
+    
+    .navhead{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-div{
+        margin: 0;
+        margin-left: 29px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .md-menu{
+        margin: 0;
+        margin-right: 29px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        cursor: pointer;
+    }
+    .close{
+        margin: 0;
+        margin-right: 49px;
+        margin-top: 25px;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        display: none;
+    }
+    .close-white{
+       display: flex;
+       justify-content: right;
+       margin: 0;
+       margin-right: 25px;
+       margin-top: 35px;
+    }
+    .menu-tag{
+        color: white;
+        font-size: 13px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    /* Styles for small desktop screens and tablets */
+    .navmenu{
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background-color: transparent;
+    }
+    .hide-item{
+        transform: translateY(100%);
+    }
+    .nav-ul{
+        position: absolute;
+        background-color: #e89925;
+        right: 0;
+        top: -14px;
+        height: 100vh;
+        width: 90%;
+        max-width: 600px;
+        transition: .7s ease transform;
+        gap: 20px;
+    }
+    ul li{
+        margin: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        display: block;
+        border-radius: 8px;
+        transition: 0.3s ease background-color;
+    }
+    ul li:hover{
+        background-color: transparent
+       
+    }
+    ul li a{
+        display: inline-block;
+        color: white;
+        font-family: 'Tanzana Narrow', sans-serif;
+        padding: 1rem 1rem;
+        font-size: 2rem;
+        font-weight: bolder;
+        outline: none;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: rgb(117, 107, 107);
+    }
+    ul li a:active{
+        color: rgb(117, 107, 107);
+    }
+    
+    .navhead{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-div{
+        margin: 0;
+        margin-left: 29px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .md-menu{
+        margin: 0;
+        margin-right: 29px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        cursor: pointer;
+    }
+    .close{
+        margin: 0;
+        margin-right: 29px;
+        margin-top: 50px;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+    }
+    .close-white{
+      display: none;
+    }
+    .menu-tag{
+        color: white;
+        font-size: 13px;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    /* Styles for mobile devices, including the Samsung Fold */
+     .navmenu{
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background-color: transparent;
+    }
+    .hide-item{
+        transform: translateY(100%);
+    }
+    .nav-ul{
+        position: absolute;
+        background-color: #e89925;
+        right: 0;
+        top: -14px;
+        height: 100vh;
+        width: 90%;
+        max-width: 600px;
+        transition: .7s ease transform;
+        gap: 20px;
+        z-index: 100;
+    }
+    ul li{
+        display: block;
+        margin: 0;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+        transition: 0.3s ease background-color;
+    }
+    ul li:hover{
+        background-color: transparent
+       
+    }
+    ul li a{
+        display: inline-block;
+        color: white;
+        font-family: 'Tanzana Narrow', sans-serif;
+        padding: 1rem 1rem;
+        font-size: 2rem;
+        font-weight: 800;
+        outline: none;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: rgb(117, 107, 107);
+    }
+    ul li a:active{
+        color: rgb(117, 107, 107);
+    }
+    
+    .navhead{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-div{
+        margin: 0;
+        margin-left: 29px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .md-menu{
+        margin: 0;
+        margin-right: 29px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        cursor: pointer;
+    }
+    .close{
+        margin: 0;
+        margin-right: 29px;
+        margin-top: 50px;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+    }
+    .close-white{
+      display: none;
+    }
+    .menu-tag{
+        color: white;
+        font-size: 13px;
+    }
+  }

@@ -1,0 +1,34 @@
+.footer-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    background-image: linear-gradient(360deg, #fff 33%, #e89925 100%);
+}
+.footer-inner-div{
+    height: auto;
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 56px;
+}
+.footer-logo-div{
+    position: absolute;
+    width: 100%;
+  }
+  .footer-logo{
+    margin: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 90px;
+  }
+  .footer-social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+  }

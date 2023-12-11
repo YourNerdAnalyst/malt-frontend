@@ -1,0 +1,377 @@
+@media only screen and (max-width: 300px){
+    .count-container{
+        width: 100%;
+        max-width: 99%;
+        margin: auto;
+        height: 250px;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+        gap: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .count-left{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        position: absolute;
+        margin: -10px;
+        margin-bottom: 131px;
+    }
+    .count-right{
+        position:absolute;
+        margin: 0;
+        margin-top: 99px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 18px;
+        overflow: hidden;
+    }
+
+    .count-left h3{
+        color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+         font-style:normal;
+         font-size: 8px;
+    }
+    .count-left h1{
+        color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+         font-style:normal;
+         font-size: 9px;
+    }
+    
+    .count-right{
+        position:absolute;
+        margin: 0;
+        margin-top: 99px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 18px;
+        overflow: hidden;
+    }
+    .count-right div{
+        margin: 12px;
+    }
+    .count-right h1{
+        font-size: 14px;
+        color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+        font-style: italic;
+    }
+    .count-right h6{
+        font-size: 10px;
+        color: rgb(98, 102, 105);
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+        font-style: italic;
+    }
+
+}
+
+@media only screen and (min-width: 301px) and (max-width: 767px){
+    .count-container{
+        width: 100%;
+        max-width: 99%;
+        margin: auto;
+        /* margin-top: 13rem; */
+        height: 250px;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+        gap: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .count-left{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        position: absolute;
+        margin: -10px;
+        margin-bottom: 100px;
+    }
+    .count-left h3{
+        color: #e89925;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+         font-style:normal;
+         font-size: 8px;
+         background-color: #fff;
+       }
+       .count-left h1{
+        color: #e89925;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+         font-style:normal;
+         font-size: 9px;
+         background-color: #fff;
+       }
+       .count-right{
+        position:absolute;
+        margin: 0;
+        margin-top: 99px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 28px;
+        overflow: hidden;
+    }
+    .count-right .firstrow{
+        display: flex;
+        gap: 35px;
+    }
+    .count-right .secondrow{
+        display: flex;
+        gap: 35px;
+    }
+
+    .count-right h1{
+        font-size: 16px;
+        color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+         background-color: #e89925;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 20px;
+    }
+    .count-right h6{
+        font-size: 9px;
+        color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+         background-color: #e89925;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+.count-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e89925;
+}
+.count-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.count-left h3{
+      color: #fff;
+    font-weight: 900;
+     font-family: 'Tanzana Narrow', sans-serif;
+     font-style:normal;
+     font-size: 17px;
+   }
+   .count-left h1{
+      color: #fff;
+    font-weight: 900;
+     font-family: 'Tanzana Narrow', sans-serif;
+     font-style:normal;
+     font-size: 20px;
+   }
+   .count-right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 48px;
+    overflow: hidden;
+}
+.count-right h1{
+    font-size: 25px;
+      color: #fff;
+    font-weight: 900;
+     font-family: 'Tanzana Narrow', sans-serif;
+        font-style: italic;
+}
+.count-right h6{
+    font-size: 16px;
+    color: rgb(98, 102, 105);
+    font-weight: 900;
+     font-family: 'Tanzana Narrow', sans-serif;
+        font-style: italic;
+}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px){
+    .count-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* background-color: #e89925; */
+        background-color: transparent;
+    }
+    .count-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+    }
+    .count-left h3{
+          color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+         font-style:normal;
+         font-size: 20px;
+       }
+       .count-left h1{
+          color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+         font-style:normal;
+         font-size: 28px;
+         margin: 0;
+         margin-top: 100px;
+       }
+       .count-right{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 48px;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+    .firstrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 0;
+        margin-left: 60px;
+        margin-bottom: 20px;
+    }
+    .secondrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .count-right h1{
+        font-size: 30px;
+          color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+            font-style: italic;
+    }
+    .count-right h6{
+        font-size: 13px;
+        color: #e89925;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+            font-style: italic;
+    }
+}
+    
+
+@media only screen and (min-width: 1280px){
+    .count-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        /* background-color: #e89925; */
+        background-color: transparent;
+    }
+    .count-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+    .count-left h3{
+         color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+         font-style:normal;
+         font-size: 20px;
+         margin: 0;
+         margin-top: 10px;
+         margin-left: 40px;
+       }
+       .count-left h1{
+         color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+         font-style:normal;
+         font-size: 20px;
+         margin: 0;
+         margin-top: -10px;
+         margin-left: 40px;
+       }
+       .count-right{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 48px;
+        overflow: hidden;
+        width: 50%;
+        position: relative;
+    }
+    .firstrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 0;
+        margin-left: 160px;
+        margin-bottom: 20px;
+    }
+    .secondrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .count-right h1{
+        font-size: 20px;
+         color: #fff;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+        font-style: italic;
+    }
+    .count-right h6{
+        font-size: 16px;
+        color: #e89925;
+        font-weight: 900;
+         font-family: 'Tanzana Narrow', sans-serif;
+            font-style: italic;
+    }
+}
+    
+
+

@@ -1,0 +1,723 @@
+const handleSubmit = (event) => {
+    event.preventDefault();
+    const frame = document.getElementById('frame').contentWindow.document;
+    console.log(frame);
+    frame.open();
+    frame.write(`
+      <html>
+        <head>
+          <style>
+            .frame {
+              background-color: white;
+              margin: 0;
+              padding: 0;
+              border: none;
+              position: relative;
+              overflow: hidden;
+            }
+
+            .textarea-div{
+              position: absolute;
+              background: black;
+              bottom: 33px;
+              left: 0px;
+              height: 100px;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .text-inner{
+              position: absolute;
+              background: transparent;
+              border: 1px solid #F6881F;
+              width: 85%;
+              height: 91px;
+              z-index: 2;
+            }
+            .text-inner h6{
+              position: absolute;
+              font-size: 9px;
+              bottom: 0px;
+              left: 14px;
+              color: #F6881F;
+            }
+            .text-inner p{
+              position: absolute;
+              font-size: 11px;
+              color: #F6881F;
+              left: 14px;
+            }
+
+            .wave {
+              display: block;
+              position: absolute;
+              height: 350px;
+              width: 100%;
+              z-index: 1;
+              top: 0px;
+            }
+            .wavee {
+              display: flex;
+              justify-content: center;
+              position: absolute;
+              height: 145px;
+              width: 100%;
+              bottom: -20px;
+            }
+            img {
+              width:100%;
+              max-width: 100%;
+              height: 484px;
+              display: block;
+              margin: 0 auto;
+            }
+            .image--loogo{
+              z-index: 2;
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              height: 40px;
+              width: 70px;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="frame" id='frame'>
+
+          <div class="wave">
+          <svg viewBox="0 0 500 200">
+          <path d="M 0 50 C 150 150 300 0 500 80 L 500 0 L 0 0" fill="#000000"></path>
+          <path d="M 0 50 C 150 150 330 -30 500 50 L 500 0 L 0 0" fill="#F6881F" opacity="6.8"></path>
+        <path d="M 0 50 C 215 150 250 0 500 100 L 500 0 L 0 0" fill="#F6881F" opacity="0.5"></path>
+        </svg>
+        <img src="" alt="logo" class='image--loogo' />
+          </div>
+         
+          <img src="${image}" alt="User Uploaded Image" />
+
+          <div class='textarea-div'>
+            <div class='text-inner'>
+            <p>Text: ${text}</p>
+            <h6>My Squad Name: ${squadName}</h6>
+            </div>
+
+          </div>
+          
+
+          <div class="wavee">
+          <svg viewBox="0 0 500 200" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform: scaleY(-1) scaleX(-1);"> 
+          <path d="M 0 50 C 150 150 300 0 500 80 L 500 0 L 0 0" fill="#000000"></path>  
+          <path d="M 0 50 C 150 150 330 -30 500 50 L 500 0 L 0 0" fill="#F6881F" opacity="0.8"></path>  
+          <path d="M 0 50 C 215 150 250 0 500 100 L 500 0 L 0 0" fill="#F6881F" opacity="0.5"></path>  
+        </svg> 
+          </div>
+
+          </div>
+        </body>
+      </html>
+    `);
+    frame.close();
+  };
+
+
+
+
+
+  const frame = document.getElementById('frame').contentWindow.document;
+    const frameContent = frame.documentElement.outerHTML;
+    const canvas = document.createElement('canvas');
+    const image = new Image();
+
+  
+    
+    image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><foreignObject width="100%" height="100%"><div xmlns="http://www.w3.org/1999/xhtml">${frameContent}</div></foreignObject></svg>`);
+    image.onload = () => {
+      canvas.width = image.width;
+      canvas.height = image.height;
+      const context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0);
+      canvas.toBlob((blob) => {
+        const link = document.createElement('a');
+        link.download = 'image.png';
+        link.href = URL.createObjectURL(blob);
+        link.click();
+      }, 'image/png');
+    };
+
+
+
+    const handleDownload = async () => {
+    const dataUrl = await htmlToImage.toPng(document.getElementById('frame').contentWindow.document);
+
+     // download image
+    const link = document.createElement('a');
+    link.download = "html-to-img.png";
+    link.href = dataUrl;
+    link.click();
+  };
+
+
+
+   // const handleImageUpload = (event) => {
+  //   const file = event.target.files[0];
+  //   const reader = new FileReader();
+  //   reader.readAsDataURL(file);
+  //   reader.onloadend = () => {
+  //     setImage(reader.result);
+  //   };
+  // };
+
+
+   <img src="${completedCrop ? completedCrop.toDataUrl() : ''}" alt="User Uploaded Image" />
+
+
+
+
+     //  useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const now = new Date().getTime();
+  //     const distance = targetDate.getTime() - now;
+  //      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  //     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  //     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  //      setTimeLeft({ days, hours, minutes, seconds });
+  //   }, 1000);
+  //    return () => clearInterval(interval);
+  // }, [targetDate]);
+
+
+
+
+
+
+
+
+   // const handleDownload = async () => {
+    //   console.log('handleDownload called');
+    //   const frame = document.getElementById('frame');
+      
+    //   if (frame) {
+    //     const frameDocument = frame.contentDocument || frame.contentWindow.document;
+    //     console.log(frameDocument);
+        
+    //     // Generate image in JPEG format
+    //     const dataUrl = await toJpeg(frameDocument.querySelector('#frame'), 1.0); // Specify the desired image quality (0.0 - 1.0)
+    //     console.log(dataUrl);
+        
+    //     return dataUrl;
+    //   } else {
+    //     console.log('Frame element not found');
+    //     return null;
+    //   }
+    // };
+
+
+  // const handleDownload = async() => {
+    
+  //   const frameDocument = document.getElementById('frame').contentDocument || document.getElementById('frame').contentWindow.document;
+  //   const dataUrl = await toJpeg(frameDocument.querySelector('#frame'));
+
+  //    // download image
+  //    const link = document.createElement('a');
+  //    link.download = "html-to-img.jpeg";
+  //    link.href = dataUrl;
+  //    link.click();
+  // };
+
+
+  // const handleDownload = async () => {
+  //   console.log('handleDownload called');
+  //   const frame = document.getElementById('frame');
+  //   const frameDocument = frame.contentDocument || frame.contentWindow.document;
+  //   console.log(frameDocument);
+    
+  //   // Generate image in JPEG format
+  //   const dataUrl = await toJpeg(frameDocument.querySelector('#frame'), 1.0); // Specify the desired image quality (0.0 - 1.0)
+  //   console.log(dataUrl);
+    
+  //   return dataUrl;
+  // };
+  
+  // useEffect(() => {
+  //   const frame = document.getElementById('frame');
+  //   frame.onload = async () => {
+  //     const dataUrl = await handleDownload();
+  //     // download image
+  //     const link = document.createElement('a');
+  //     console.log(link);
+  //     link.download = 'html-to-img.jpg'; // Change the file extension to .jpg
+  //     link.href = dataUrl;
+  //     link.click();
+  //   };
+  //   console.log('load event listener added');
+  
+  //   return () => {
+  //     frame.onload = null;
+  //     console.log('load event listener removed');
+  //   };
+  // }, []);
+
+
+   // <div class='date-div'>
+          //   <div>
+          //     <span>
+          //       <h4>Jun</h4>
+          //       <h1>30</h1>
+          //     </span>
+          //   </div>
+          // </div>
+
+            // const handleButtonClick = async () => {
+      //   const dataUrl = await HandleDownload();
+      //   // create a Blob object from the dataUrl
+      //   const blob = await (await fetch(dataUrl)).blob();
+      //   // create a URL object from the Blob
+      //   const url = URL.createObjectURL(blob);
+      //   // download image
+      //   const link = document.createElement('a');
+      //   link.download = 'html-to-img.png'; // Change the file extension to .jpg
+      //   link.href = url;
+      //   link.click();
+      //   // revoke the URL object to free up memory
+      //   URL.revokeObjectURL(url);
+      // };
+
+
+.date-div{
+              background-color: transparent;
+              background-image: linear-gradient(360deg, #fff 33%, #e89925 100%);
+              position: absolute;
+              width: 45px;
+              height: 60px;
+              bottom: 112px;
+              right: 20px;
+              z-index: 3;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 10px;
+            }
+            .date-div div{
+              height: 100%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .date-div div span h4{
+              font-size: 11px;
+              color: black;
+            }
+            .date-div div span h1{
+              font-size: 20px;
+              color: black;
+            }
+
+
+
+
+            // const handle2ndSubmit = async(event) => {
+  //   event.preventDefault()
+  //   const imageData = {
+  //     name,
+  //     phone_number,
+  //     email,
+  //     description,
+  //     squadName,
+  //     imageUrl
+  //   }
+  //   if(!name || !phone_number || !email || !description || !squadName || !imageUrl){
+  //     toast.error("Please kindly fill in your complete details!",{
+  //       position: 'top-right',
+  //       autoClose: 3000,
+  //       hideProgressBar: true,
+  //       closeOnClick: true,
+  //       pauseOnHover: true,
+  //       draggable: true,
+  //       progress: undefined,
+  //       backgroundColor: 'red',
+  //       color: '#fff',
+  //     });
+  //     return;
+  //   }
+  //   try{
+  //      // Send a POST request to the backend
+  //      const response = await axios.post(IMAGE_DATA, imageData);
+
+  //      // Handle the response from the backend
+  //      console.log(response.data);
+
+  //       // Clear the input values
+  //     event.target.elements.name.value = '';
+  //     event.target.elements.phone_number.value = '';
+  //     event.target.elements.email.value = '';
+  //     event.target.elements.description.value = '';
+  //     event.target.elements.squadName.value = '';
+  //     event.target.elements.imageUrl.value = '';
+
+
+  //     if (response.data) {
+  //       toast.success("Badge Generated and ready for download!",{
+  //         position: 'top-right',
+  //         autoClose: 3000,
+  //         hideProgressBar: true,
+  //         closeOnClick: true,
+  //         pauseOnHover: true,
+  //         draggable: true,
+  //         progress: undefined,
+  //         backgroundColor: 'green',
+  //         color: '#fff',
+  //       });
+        
+  //     } else {
+  //       toast.error("Badge generation failed. Please try again.",{
+  //         position: 'top-right',
+  //         autoClose: 3000,
+  //         hideProgressBar: true,
+  //         closeOnClick: true,
+  //         pauseOnHover: true,
+  //         draggable: true,
+  //         progress: undefined,
+  //         backgroundColor: 'red',
+  //         color: '#fff',
+  //       });
+  //     }
+  
+  //       } catch (error) {
+  //         // Handle errors
+  //         console.error(error);
+  //       }
+  //   }
+
+
+
+
+    // const handleDownload2 = () => {
+  //   const frameDocument = document.getElementById('frame').contentDocument || document.getElementById('frame').contentWindow.document;
+  //   const canvas = document.createElement('canvas');
+  //   const context = canvas.getContext('2d');
+  //   const frameElement = frameDocument.querySelector('#frame');
+  
+  //   canvas.width = frameElement.offsetWidth;
+  //   canvas.height = frameElement.offsetHeight;
+  
+  //   const image = new Image();
+  
+  //   image.onload = () => {
+  //     context.drawImage(image, 0, 0);
+  //     const dataUrl = canvas.toDataURL('image/png');
+  
+  //     const link = document.createElement('a');
+  //     link.href = dataUrl;
+  //     link.download = 'html-to-img.png';
+  //     link.target = '_blank';
+  
+  //     const event = new MouseEvent('click');
+  //     link.dispatchEvent(event);
+  //   };
+  
+  //   // Set the source of the image after the onload event is defined
+  //   image.src = frameElement.src;
+  // };
+
+
+
+const handleDownload2 = () => {
+    const frameDocument = document.getElementById('frame').contentDocument;
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    const frameElement = frameDocument.querySelector('#frame');
+    
+    canvas.width = frameElement.offsetWidth;
+    canvas.height = frameElement.offsetHeight;
+    
+    const image = new Image();
+    
+    image.onload = () => {
+      context.drawImage(image, 0, 0);
+      canvas.toBlob((blob) => {
+        // Create a new anchor element
+        const link = document.createElement('a');
+        // Set the href attribute to the blob URL
+        link.href = URL.createObjectURL(blob);
+        // Set the download attribute to the desired file name
+        link.download = 'frame-image.png';
+        // Simulate a click on the anchor element to trigger the download
+        link.click();
+      }, 'image/png');
+    };
+    
+    // Set the source of the image after the onload event is defined
+    image.src = frameElement.src;
+  };
+
+  // const handleDownload2 = () => {
+  //   const frameElement = document.getElementById('frame');
+  //   const frameWindow = frameElement.contentWindow;
+  
+  //   frameWindow.addEventListener('load', () => {
+  //     const canvas = document.createElement('canvas');
+  //     const context = canvas.getContext('2d');
+  
+  //     canvas.width = frameElement.offsetWidth;
+  //     canvas.height = frameElement.offsetHeight;
+  
+  //     context.drawImage(frameWindow, 0, 0, frameElement.offsetWidth, frameElement.offsetHeight);
+  
+  //     canvas.toBlob((blob) => {
+  //       // Create a new anchor element
+  //       const link = document.createElement('a');
+  //       // Set the href attribute to the blob URL
+  //       link.href = URL.createObjectURL(blob);
+  //       // Set the download attribute to the desired file name
+  //       link.download = 'frame-image.png';
+  //       // Simulate a click on the anchor element to trigger the download
+  //       link.click();
+  //     }, 'image/png');
+  //   });
+  // };
+
+  // const handleDownload2 = () => {
+  //   const frameElement = document.getElementById('frame');
+  //   const frameWindow = frameElement.contentWindow;
+  //   frameWindow.addEventListener('load', async () => {
+  //     const canvas = document.createElement('canvas');
+  //     const context = canvas.getContext('2d');
+  //     canvas.width = frameElement.offsetWidth;
+  //     canvas.height = frameElement.offsetHeight;
+  //      const image = new Image();
+  //     image.crossOrigin = 'Anonymous';
+  //     image.onload = () => {
+  //       context.drawImage(image, 0, 0);
+  //       canvas.toBlob((blob) => {
+  //         const link = document.createElement('a');
+  //         link.href = URL.createObjectURL(blob);
+  //         link.download = 'frame-image.png';
+  //         link.click();
+  //       }, 'image/png');
+  //     };
+  //      // Access the frame's content directly using contentWindow.document
+  //     const frameDocument = frameWindow.document;
+  //     const frameImage = frameDocument.querySelector('img');
+  //     image.src = frameImage.src;
+  //   });
+  // };
+
+
+  
+
+  // const handleDownload = async () => {
+  //   const frameDocument = document.getElementById('frame').contentDocument || document.getElementById('frame').contentWindow.document;
+  //   const dataUrl = await htmlToImage.toPng(frameDocument.querySelector('#frame'));
+  //    // Check if the device is running on iOS
+  //   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  //    // If the device is iOS, open the image in a new window instead of downloading
+  //   if (isIOS) {
+  //     window.open(dataUrl);
+  //   } else {
+  //     // For non-iOS devices, download the image
+  //     const link = document.createElement('a');
+  //     link.download = 'image.png';
+  //     link.href = dataUrl;
+  //     link.click();
+  //   }
+  // };
+  
+
+  
+  // const handleImageUpload2 = (event) => {
+  //   const file = event.target.files[0];
+  //   const blobUrl = URL.createObjectURL(file);
+  //   setImage(blobUrl);
+  //   URL.revokeObjectURL(blobUrl);
+  // };
+
+
+
+  <style>
+            .frame {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              background-color: white;
+              margin: 0;
+              margin-top: -10px;
+              margin-left: 0px;
+              padding: 0;
+              border: none;
+              position: relative;
+              overflow: hidden;
+              width: 20rem;
+              height: 24rem;
+            }
+
+            .textarea-div{
+              position: absolute;
+              background: #fff;
+              bottom: 15px;
+              left: 0px;
+              height: 100px;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .text-inner{
+              position: static;
+              position: absolute;
+              background: transparent;
+              width: 85%;
+              height: 91px;
+              z-index: 2;
+            }
+            .text-inner h6{
+              position: absolute;
+              font-size: 9px;
+              bottom: 0px;
+              left: 14px;
+              color: #F6881F;
+            }
+            .text-inner p{
+              position: absolute;
+              font-size: 11px;
+              color: #F6881F;
+              left: 14px;
+            }
+
+            .wave {
+              display: block;
+              position: absolute;
+              height: 350px;
+              width: 100%;
+              z-index: 1;
+              top: 0px;
+            }
+            .wavee {
+              position: static;
+              display: flex;
+              justify-content: center;
+              position: absolute;
+              height: 145px;
+              width: 100%;
+              bottom: -27px;
+            }
+            img {
+              flex-grow: 1;
+              width:100%;
+              height: 100%;
+              display: block;
+              margin: 0 auto;
+              margin-top:1.5rem;
+            }
+            .image--loogo{
+              z-index: 2;
+              position: absolute;
+              top: -10px;
+              left: 10px;
+              height: 3.8rem;
+              width: 2.4rem;
+            }
+            .date-div{
+              background-color: transparent;
+              background-image: linear-gradient(360deg, #fff 33%, #e89925 100%);
+              position: absolute;
+              width: 45px;
+              height: 60px;
+              bottom: 112px;
+              right: 20px;
+              z-index: 3;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 10px;
+            }
+            .date-div div{
+              height: 100%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .date-div div span h4{
+              font-size: 11px;
+              color: black;
+            }
+            .date-div div span h1{
+              font-size: 20px;
+              color: black;
+            }
+          </style>
+
+
+
+
+
+
+
+          Server-Side Rendering (SSR) involves generating the image file on the server and then sending it back to the client for download. Here's an overview of the steps involved in achieving SSR for image generation and download: 
+ 
+1. Set up a server: You'll need to set up a server that can receive requests and generate the image file. This could be done using a server-side framework like Node.js, Python, PHP, etc. 
+ 
+2. Define an endpoint: Create an endpoint on your server that will receive the necessary data for image generation. This could be done using a route in your server-side code. 
+ 
+3. Generate the image: On the server, use a library or tool to generate the image file based on the received data. You can use libraries like Canvas, ImageMagick, or any other image manipulation library that suits your server-side technology. 
+ 
+4. Save the image: Once the image is generated, save it to a temporary location on the server. You can use a temporary directory or a database to store the file temporarily. 
+ 
+5. Send the file back to the client: Once the image is saved, send it back to the client as a downloadable file. This can be done by setting the appropriate headers in the server's response and sending the file data to the client. 
+ 
+6. Trigger the download on the client: On the client-side, you can initiate the download by creating a link element or using JavaScript to trigger the download of the file received from the server. 
+ 
+Here's an example of how the server-side code could look like using Node.js and Express.js:
+const express = require('express');
+const fs = require('fs');
+const { createCanvas } = require('canvas');
+
+const app = express();
+
+app.get('/generate-image', (req, res) => {
+  // Generate the image using received data
+  const canvas = createCanvas(400, 400);
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#FF0000';
+  ctx.fillRect(0, 0, 400, 400);
+
+  // Save the image to a temporary location
+  const filePath = './temp/image.png';
+  const out = fs.createWriteStream(filePath);
+  const stream = canvas.createPNGStream();
+  stream.pipe(out);
+
+  out.on('finish', () => {
+    // Send the file back to the client
+    res.setHeader('Content-Disposition', 'attachment; filename=image.png');
+    res.sendFile(filePath, {}, (err) => {
+      // Delete the temporary file after sending
+      fs.unlink(filePath, () => {
+        if (err) {
+          console.error(err);
+        }
+      });
+    });
+  });
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+In this example, we use the  canvas  library to generate a simple red square image. The image is saved to a temporary location, and then sent back to the client as a downloadable file with the appropriate headers. 
+ 
+Please note that this is a simplified example, and you may need to adjust it based on your specific requirements and server-side technology.
+Question :
+
+how do i save my chats with you
+Answer :
+
+Share icon
+To save your chats with me, you have a few options: 
+1. Take Screenshots: You can take screenshots of our conversation by pressing the "Print Screen" (PrtScn) key on your keyboard. Then, you can paste the screenshot into an image editing software or a word processor and save it as an image or document file. 
+2. Copy and Paste: You can copy the text of our conversation by selecting the desired portion of the text and pressing "Ctrl + C" on Windows or "Command + C" on Mac. Then, you can paste it into a text editor or word processor and save it as a text document. 
+3. Print to PDF: If you want to save the conversation as a PDF file, you can use the print functionality of your browser. Press "Ctrl + P" on Windows or "Command + P" on Mac to open the print dialog. Then, choose the option to print to PDF and save the conversation as a PDF file. 
+Remember to save the screenshots or copied text in a location of your choice on your device for future reference.

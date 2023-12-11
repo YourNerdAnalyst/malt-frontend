@@ -1,0 +1,312 @@
+@media only screen and (max-width: 300px){
+    .owoluabi-cont{
+        background-image: url('../../../images/slideIMG/TTH-element-image.jpg');
+        width: 100%;
+        height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0,0,0,0.5);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .inside-div{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        height: 93%;
+        color:#F6881F;
+        padding: 0;
+        margin: auto;
+        top: 40px;
+    }
+    .headings h4{
+        font-size: 15px;
+        font-weight: 800;
+    }
+    .headings h1{
+        font-size: 29px;
+        font-weight: 800;
+    }
+    .ptext-div h6{
+        font-size: 11px;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      @keyframes slide-in {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .animation-on {
+        animation: slide-in 1s ease-in-out;
+      }
+}
+
+@media only screen and (min-width: 301px) and (max-width: 767px){
+    .owoluabi-cont{
+        background-image: url('../../../images/slideIMG/TTH-element-image.jpg');
+        width: 100%;
+        height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0,0,0,0.5);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .inside-div{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        height: 90%;
+        color:#F6881F;
+        padding: 0;
+        margin: auto;
+        top: 40px;
+    }
+    .headings h1{
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 2px;
+    }
+    .ptext-div h6{
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      @keyframes slide-in {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .animation-on {
+        animation: slide-in 1s ease-in-out;
+      }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .owoluabi-cont{
+        background-image: url('../../../images/slideIMG/TTH-element-image.jpg');
+        width: 100%;
+        height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0,0,0,0.5);
+        position: relative;
+    }
+    .inside-div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        height: 67%;
+        color:#F6881F;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 100px;
+        right: 80px;
+    }
+    .headings h4{
+        font-size: 15px;
+        font-weight: 800;
+    }
+    .headings h1{
+        font-size: 29px;
+        font-weight: 800;
+    }
+    .ptext-div h6{
+        font-size: 14px;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      @keyframes slide-in {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .animation-on {
+        animation: slide-in 1s ease-in-out;
+      }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px){
+    .owoluabi-cont{
+        background-image: url('../../../images/slideIMG/TTH-element-image.jpg');
+        width: 100%;
+        height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0,0,0,0.5);
+        position: relative;
+    }
+    .inside-div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        height: 73%;
+        color:#F6881F;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 100px;
+        right: 80px;
+    }
+    .headings h4{
+        font-size: 15px;
+        font-weight: 800;
+    }
+    .headings h1{
+        font-size: 29px;
+        font-weight: 800;
+    }
+    .ptext-div h6{
+        font-size: 15px;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      @keyframes slide-in {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .animation-on {
+        animation: slide-in 1s ease-in-out;
+      }
+}
+
+@media only screen and (min-width: 1280px){
+    .owoluabi-cont{
+        background-image: url('../../../images/slideIMG/TTH-element-image.jpg');
+        width: 100%;
+        height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0,0,0,0.5);
+        position: relative;
+    }
+    .inside-div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        color:#F6881F;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 100px;
+        right: 80px;
+    }
+    .headings h1{
+      font-size: 20px;
+      font-weight: 500;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 2px;
+  }
+  .ptext-div h6{
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 2px;
+  }
+    .ptext-div h6{
+        font-size: 16px;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      @keyframes slide-in {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .animation-on {
+        animation: slide-in 1s ease-in-out;
+      }
+      
+}
+
+
+
+
